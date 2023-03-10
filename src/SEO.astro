@@ -134,11 +134,13 @@ if (title) {
 
 <meta
   name="robots"
-  content={`
-    ${noindex ? "noindex" : "index"}, 
-    ${nofollow ? "nofollow" : "follow"}
-    ${noarchive ? "noarchive" : null}
-  `}
+  content={`${
+    noindex ? "noindex" : "index"
+  }, ${
+    nofollow ? "nofollow" : "follow"
+  }${
+    noarchive ? ", noarchive" : ""
+  }`}
 />
 
 {props.openGraph && <OpenGraphBasicTags {...props} />}
